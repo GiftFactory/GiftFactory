@@ -2,7 +2,29 @@
 
 --- Team Agreements ---
 
+Team mates:
+
+1. Mohammad Altamimi 
+
+2. Amr nazzal
+
+3. Aseel Hamamreh
+
+4. Mohammad aqel
+
+5. Noor Abu khalaf
+
+6. Fidaa Saed 
+
+
+
 Describe at least:
+  Group 5 - GiftMakers:
+  1. Mohmaad Altamimi.
+  2. Noor Abu Khalaf.
+  3. Aseel Hamamreh.
+  4. Amro Nazzal.
+
 
 What is the group process to resolve conflict, when it arises?
 How will you raise concerns to members who are not adequately contributing?
