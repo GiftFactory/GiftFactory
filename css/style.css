@@ -43,6 +43,7 @@ header {
 
   a{
     text-decoration: none;
+    position: relative;
     color:white;
   }
   header nav ul li:hover {
