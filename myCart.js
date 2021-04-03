@@ -50,7 +50,7 @@ let headerRow=document.createElement('tr');
 tableHeader.appendChild(headerRow);
 
 let firstHeader=document.createElement('th');
-firstHeader.textContent='itemName';
+firstHeader.textContent='Item';
 headerRow.appendChild(firstHeader);
 
 let secondHeader=document.createElement('th');
@@ -63,7 +63,7 @@ thirdHeader.textContent='Quantity';
 headerRow.appendChild(thirdHeader);
 
 let fifthHeader=document.createElement('th');
-fifthHeader.textContent='preview';
+fifthHeader.textContent='Preview';
 headerRow.appendChild(fifthHeader);
 
 let fourthHeader=document.createElement('th');
@@ -96,11 +96,13 @@ for (let i=0; i<Item.array.length;i++){
   newCell.setAttribute('id','id'+[i]);
   // newCell.setAttribute('class','input');
   newCell.nodeValue=parseInt(`${Item.array[i].quantity}`);
+  newRow.appendChild(newCell);
 
+  newCell= document.createElement('td');
+  let newCellimg= document.createElement('img');
+  newCellimg.src=`${Item.array[i].path}`;
   newRow.appendChild(newCell);
-  newCell= document.createElement('img');
-  newCell.src=`${Item.array[i].path}`;
-  newRow.appendChild(newCell);
+  newCell.appendChild(newCellimg);
 
   let newCell1= document.createElement('td');
   newCell1.textContent=`${Item.array[i].multiPrice}`;
@@ -118,8 +120,10 @@ for (let i=0; i<Item.array.length;i++){
 
 }
 
+let tableFooter=document.createElement('tfoot');
+table.appendChild(tableFooter);
 let footerRow=document.createElement('tr');
-table.appendChild(footerRow);
+tableFooter.appendChild(footerRow);
 
 let totalHeader=document.createElement('th');
 totalHeader.textContent='TOTAL';

@@ -5,10 +5,10 @@ body {
     align-items: center;
     text-align: center;
 }
-body *{
+/* body *{
   border: solid 2px  #d32727;
   
-}
+} */
 
 /* header */
 header {
@@ -52,31 +52,56 @@ header {
  
  
  main{
-   height:800px;
- }
- 
- 
- 
- img{
-   height:10%;
-  width:10%;
+   height:1000px;
  }
  
  
  
  
-  td{
+ 
+ 
+ 
+  td,tr,th{
    border:solid black 2px;
+   width:100px;
+   height:25px;
 
  }
  
+ input{
+   width:75px;
+ }
  
+ img{
+   height:200%;
+   width:90%;
+  
+ }
  
+ table{
+   text-align: center;
+   border: solid;
+   margin-left: 165px;
+   width:75%;
+   
+ }
+
+ #cartTable
+ {
+   height:1000px;
+   width:100%;
+   text-align:center;
+   border: black solid ;
+   padding-top: 20px;
+
+ }
  
- 
- 
- 
- 
+ button{
+   height:45%;
+   background-color: brown;
+   border-radius: 5px;
+   margin-top: 20px;
+ }
  
  
  
