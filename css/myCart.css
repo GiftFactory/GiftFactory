@@ -11,6 +11,8 @@ body {
 } */
 
 /* header */
+
+
 header {
     text-align: center;
     background: #202020;
@@ -55,7 +57,12 @@ header {
    height:1000px;
  }
  
- 
+ h6{
+   font-size: 18px;
+   position: relative;
+   color:white;
+   left:365px;
+ bottom:102px;}
  
  
  
