@@ -15,8 +15,13 @@ main {
 }
 /* body *{
   border: solid 2px  #d32727;
+
   
 } */
+=======
+} */
+
+
 
 /* header */
 header {
@@ -66,6 +71,7 @@ header {
 
   a{
     text-decoration: none;
+    position: relative;
     color:white;
   }
   header nav ul li:hover {
