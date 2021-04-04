@@ -95,7 +95,7 @@ function next2(){
       const myimages = document.createElement('img');
       colorsID.appendChild(myimages);
       myimages.src= `./giftColors/${event.target.value}.png`;
-      localStorageArray.push(`./giftColors/${event.target.value}.png`);
+      localStorageArray[1]=(`./giftColors/${event.target.value}.png`);
 
       myimages.height = 300;
       myimages.width = 300;
@@ -192,7 +192,7 @@ function price (){
 
     // itemPrice = Math.floor(Math.random() * (40 - 20 + 1)) + 20;
     itemPrice=Math.floor(Math.random() * (40 - 20 + 1)) + 20;
-    localStorageArray.push(itemPrice);
+    localStorageArray[2]=(itemPrice);
     console.log(localStorageArray);
     settingItem();
 
@@ -214,15 +214,19 @@ function final (){
   finalID.appendChild(br2);
   const bagBottun = document.createElement('button');
   finalID.appendChild(bagBottun);
-  bagBottun.textContent='Go to shopping bag';
+  bagBottun.textContent='Go to shopping Cart';
+  bagBottun.addEventListener('click',cartPage);
+  function cartPage(){
+    bagBottun.setAttribute('onclick','location.href=\'myCart.html\'');
+  }
 }
 
 
 // for adding a local storage:
 
-let localStorageArray=[];
+let localStorageArray=['','','',1];
 
-localStorageArray.push('RandomItem');
+localStorageArray[0]=('RandomItem');
 settingItem();
 function settingItem(){
   let stringObj = JSON.stringify(localStorageArray);
