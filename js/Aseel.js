@@ -224,9 +224,10 @@ function final (){
 
 // for adding a local storage:
 
-let localStorageArray=['','','',1];
+let localStorageArray=['','','',''];
 
 localStorageArray[0]=('RandomItem');
+localStorageArray[3]=('1');
 settingItem();
 function settingItem(){
   let stringObj = JSON.stringify(localStorageArray);
