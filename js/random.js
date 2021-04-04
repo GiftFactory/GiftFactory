@@ -17,7 +17,7 @@ const colorsID = document.getElementById('forColors');
 
 
 
-// ******************************adding event listener for the first start button:
+// ******************************adding event listener for the first start button**showing age question:
 
 const ageSection =document.getElementById('age');
 
@@ -34,14 +34,14 @@ startButoon.addEventListener('click', function(){
   ageSection.appendChild(br2);
   const br3 = document.createElement ('br');
   ageSection.appendChild(br3);
-  next5();
+  next1();
 
 } , {once : true});
 
 
-// ******************************adding event listener for the first next button:
+// ******************************adding event listener for the first next button***showing occasion question:
 
-function next5(){
+function next1(){
   const firstNext = document.createElement('button');
   ageSection.appendChild(firstNext);
   firstNext.textContent='NEXT';
@@ -52,14 +52,14 @@ function next5(){
 
     const inputEl = document.createElement('input');
     occasionSection.appendChild(inputEl);
-    next1 ();
+    next2 ();
 
   } , {once:true});
 }
 
-// ******************************adding event listener for the second next button:
+// ******************************adding event listener for the second next button ***showing likes question:
 
-function next1 (){
+function next2 (){
   const br4 = document.createElement('br');
   occasionSection.appendChild(br4);
   const br5 = document.createElement('br');
@@ -85,14 +85,14 @@ function next1 (){
       label1.appendChild(br);
       const br2 = document.createElement('br');
       label1.appendChild(br2);
-    } next2();
+    } next3();
   } , {once : true});
 }
 
 
-// ******************************adding event listener for the third next button:
+// ******************************adding event listener for the third next button ***showing box ccolor question:
 
-function next2(){
+function next3(){
   const secondNext = document.createElement('button');
   likesSecion.appendChild(secondNext);
   secondNext.textContent= 'NEXT';
@@ -121,7 +121,9 @@ function next2(){
       const myimages = document.createElement('img');
       colorsID.appendChild(myimages);
       myimages.src= `./giftColors/${event.target.value}.png`;
-      localStorageArray[1]=(`./giftColors/${event.target.value}.png`);
+
+      // ***************local Storage :
+      localStorageArray[2]=(`./giftColors/${event.target.value}.png`);
 
       myimages.height = 300;
       myimages.width = 300;
@@ -204,10 +206,10 @@ function price (){
   priceID.appendChild(priceButton);
   priceButton.textContent='VIEW PRICE';
   priceButton.addEventListener('click', function(){
-
-    // itemPrice = Math.floor(Math.random() * (40 - 20 + 1)) + 20;
     itemPrice=Math.floor(Math.random() * (40 - 20 + 1)) + 20;
-    localStorageArray[2]=(itemPrice);
+
+    // ***************local Storage :
+    localStorageArray[3]=(itemPrice);
     console.log(localStorageArray);
     settingItem();
 
@@ -244,7 +246,7 @@ function final (){
 let localStorageArray=['','','',''];
 
 localStorageArray[0]=('RandomItem');
-localStorageArray[3]=('1');
+localStorageArray[1]=('1');
 settingItem();
 function settingItem(){
   let stringObj = JSON.stringify(localStorageArray);
