@@ -15,10 +15,16 @@ border-radius: 5px;
 
     
 }
-
-#giftItems{
+#x{
+    position: absolute;
+    left: 350px;
+    background-color: hotpink;
+    width: 72%;
+    height: 95%;
+}
+.giftItems{
     border: 1px solid gray;
-border-radius: 5px;
+    border-radius: 5px;
     position: relative;
     display: inline-flex;
     float:right;
@@ -29,6 +35,7 @@ border-radius: 5px;
     overflow-y: scroll;
     text-align: center;
     justify-content:space-around;
+    top: 10px;display: none;
 }
 
 .cate{
@@ -98,4 +105,7 @@ border-radius: 5px;
     margin:auto 7% auto 7%;
     text-align: center;
     left: 0;
-    font-size: 17px;
+    font-size: 17px;}
+    #cate1:hover+#giftItems1{
+        display:inline-flex;
+    }
