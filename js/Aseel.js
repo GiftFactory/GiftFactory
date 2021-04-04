@@ -2,53 +2,77 @@
 
 let itemPrice=0;
 let clicks = 0;
-let questionsArray = [
-  ' flowers',
-  'chocolate',
-  'candeys',
-  ' cosmetics',
-  'Books',
-  ' Unusual gifts',
-];
+let questionsArray = [' flowers', 'chocolate', 'candeys',' cosmetics','Books',' Unusual gifts',];
 const giftcolors = ['black' , 'white' , 'blue','green','pink','purple','red','yellow'];
 
-const mainSection = document.getElementById('myQuestions');
-const she =document.getElementById('she');
+
+// *************************getting the elements from HTML
+
+const startButoon =document.getElementById('start');
+const occasionSection = document.getElementById('occasion');
+const likesSecion = document.getElementById('likes');
+const choosecolorSecion = document.getElementById('choosecolor');
+const colorsID = document.getElementById('forColors');
 
 
-she.addEventListener('click', function(){
+
+
+// ******************************adding event listener for the first start button:
+
+const ageSection =document.getElementById('age');
+
+startButoon.addEventListener('click', function(){
   const h1El = document.createElement('h1');
-  mainSection.appendChild(h1El);
+  ageSection.appendChild(h1El);
   h1El.textContent='Enter his/her age';
   const input2 = document.createElement('input');
-  mainSection.appendChild(input2);
+  ageSection.appendChild(input2);
   input2.type='number';
   input2.min=1;
   input2.max=100;
   const br2 = document.createElement ('br');
-  mainSection.appendChild(br2);
+  ageSection.appendChild(br2);
   const br3 = document.createElement ('br');
-  mainSection.appendChild(br3);
+  ageSection.appendChild(br3);
   next5();
 
 } , {once : true});
 
 
+// ******************************adding event listener for the first next button:
 
-function next1 (){
-  const br4 = document.createElement('br');
-  mainSection.appendChild(br4);
-  const br5 = document.createElement('br');
-  mainSection.appendChild(br5);
+function next5(){
   const firstNext = document.createElement('button');
-  mainSection.appendChild(firstNext);
+  ageSection.appendChild(firstNext);
   firstNext.textContent='NEXT';
   firstNext.addEventListener('click', function(){
     const h1El = document.createElement('h1');
-    mainSection.appendChild(h1El);
+    occasionSection.appendChild(h1El);
+    h1El.textContent='What is the Occasion for the gift?';
+
+    const inputEl = document.createElement('input');
+    occasionSection.appendChild(inputEl);
+    next1 ();
+
+  } , {once:true});
+}
+
+// ******************************adding event listener for the second next button:
+
+function next1 (){
+  const br4 = document.createElement('br');
+  occasionSection.appendChild(br4);
+  const br5 = document.createElement('br');
+  occasionSection.appendChild(br5);
+  const firstNext = document.createElement('button');
+  occasionSection.appendChild(firstNext);
+  firstNext.textContent='NEXT';
+  firstNext.addEventListener('click', function(){
+    const h1El = document.createElement('h1');
+    likesSecion.appendChild(h1El);
     h1El.textContent='Select what does he/she like';
     const form = document.createElement('form');
-    mainSection.appendChild(form);
+    likesSecion.appendChild(form);
     for (let i=0; i<questionsArray.length; i++){
       const label1 = document.createElement('label');
       form.appendChild(label1);
@@ -65,19 +89,21 @@ function next1 (){
   } , {once : true});
 }
 
-const colorsID = document.getElementById('forColors');
+
+// ******************************adding event listener for the third next button:
+
 function next2(){
   const secondNext = document.createElement('button');
-  mainSection.appendChild(secondNext);
+  likesSecion.appendChild(secondNext);
   secondNext.textContent= 'NEXT';
   secondNext.addEventListener('click', function () {
     const h1El =document.createElement('h1');
-    mainSection.appendChild(h1El);
+    choosecolorSecion.appendChild(h1El);
     h1El.textContent='Now choose the color of your box gift';
 
 
     const selection = document.createElement('select');
-    mainSection.appendChild(selection);
+    choosecolorSecion.appendChild(selection);
     for (let i=0; i<giftcolors.length; i++){
       const colorsEl = document.createElement('option');
       selection.appendChild(colorsEl);
@@ -105,6 +131,10 @@ function next2(){
 
   } , {once : true});
 }
+
+
+
+// ***************************************adding event listener for the yes/NO part
 
 
 const yesID = document.getElementById('yes');
@@ -164,23 +194,8 @@ function note (){
 }
 
 
-function next5(){
-  const firstNext = document.createElement('button');
-  mainSection.appendChild(firstNext);
-  firstNext.textContent='NEXT';
-  firstNext.addEventListener('click', function(){
-    const h1El = document.createElement('h1');
-    mainSection.appendChild(h1El);
-    h1El.textContent='What is the Occasion for the gift?';
 
-    const inputEl = document.createElement('input');
-    mainSection.appendChild(inputEl);
-    next1 ();
-
-  } , {once:true});
-}
-
-
+// *************************************adding event listener for the price bottun:
 
 
 let priceID = document.getElementById('price');
@@ -204,6 +219,8 @@ function price (){
   } ,{once:true});
 }
 
+
+// ******************************************final:
 
 const finalID = document.getElementById('final');
 function final (){
