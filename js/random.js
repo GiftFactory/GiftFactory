@@ -2,7 +2,7 @@
 
 let itemPrice=0;
 let clicks = 0;
-let questionsArray = [' flowers', 'chocolate', 'candeys',' cosmetics','Books',' Unusual gifts',];
+let chooseArray = [' flowers', 'chocolate', 'candeys',' cosmetics','Books',' Unusual gifts',];
 const giftcolors = ['black' , 'white' , 'blue','green','pink','purple','red','yellow'];
 
 
@@ -73,10 +73,10 @@ function next2 (){
     h1El.textContent='Select what does he/she like';
     const form = document.createElement('form');
     likesSecion.appendChild(form);
-    for (let i=0; i<questionsArray.length; i++){
+    for (let i=0; i<chooseArray.length; i++){
       const label1 = document.createElement('label');
       form.appendChild(label1);
-      label1.textContent= questionsArray[i];
+      label1.textContent= chooseArray[i];
       const input1 = document.createElement('input');
       input1.type='checkbox';
       label1.appendChild(input1);
